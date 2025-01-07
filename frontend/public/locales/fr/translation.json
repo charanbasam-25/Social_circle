@@ -1,0 +1,23 @@
+{
+  "home": "Accueil",
+  "notifications": "Notifications",
+  "profile": "Profil",
+  "games": "Jeux",
+  "suggestions": "Suggestions",
+  "shop_here": "Boutique ici",
+  "circles_update": "Mise à jour des cercles",
+  "friends_feed": "Fil d'amis",
+  "whatsup": "Quoi de neuf ?",
+  "post": "Publier",
+  "follow": "Suivre",
+  "cart": "Panier",
+  "liked_your_post": "A aimé votre publication",
+  "delete_all_your_notifications": "Supprimer toutes vos notifications",
+  "edit_profile": "Modifier le profil",
+  "following": "Abonnements",
+  "followers": "Abonnés",
+  "posts": "Publications",
+  "likes": "Mentions J’aime",
+  "posting": "Publication en cours..",
+  "logout": "Se Déconnecter"
+}

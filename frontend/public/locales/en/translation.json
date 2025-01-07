@@ -1,0 +1,23 @@
+{
+    "home": "Home",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "games": "Games",
+    "suggestions": "Suggestions",
+    "shop_here": "Shop Here",
+    "circles_update": "Circles Update",
+    "friends_feed": "Friends Feed",
+    "whatsup": "Whatsup?",
+    "post": "Post",
+    "follow": "Follow",
+    "cart": "Cart",
+    "liked_your_post": "Liked Your Post",
+    "delete_all_your_notifications": "Delete All Your Notifications",
+    "edit_profile": "Edit Profile",
+    "following": "Following",
+    "followers": "Followers",
+    "posts": "Posts",
+    "likes": "Likes",
+    "posting": "Posting...",
+    "logout": "Logout"
+  }
