@@ -15,7 +15,7 @@ const fetchNotes = async () => {
 };
 
 const addNote = async (newNote) => {
-  const response = await fetch(API_URL, {
+  const response = await fetch("/api/note/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const addNote = async (newNote) => {
 };
 
 const deleteNote = async (id) => {
-  const response = await fetch(`${API_URL}${id}`, {
+  const response = await fetch(`/api/note/${id}`, {
     method: "DELETE",
     credentials: "include",
   });
