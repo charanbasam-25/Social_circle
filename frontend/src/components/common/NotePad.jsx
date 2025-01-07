@@ -3,11 +3,10 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { MdDeleteOutline } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// API calls
-const API_URL = "http://localhost:5000/api/note/";
+
 
 const fetchNotes = async () => {
-  const response = await fetch(API_URL + "getNote", {
+  const response = await fetch('/api/note/' + "getNote", {
     credentials: "include",
   });
   if (!response.ok) throw new Error("Error fetching notes");
@@ -118,7 +117,7 @@ const NotePad = () => {
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed right-4 ${isOpen ? "bg-orange-500" : "bg-blue-500"} text-white p-3 rounded-full shadow-lg z-50 bottom-20 top-auto md:bottom-0`}
       >
-        {isOpen ? "Close Note" : "Open Note"}
+        {isOpen ? "Close Note" : "Make Note"}
       </button>
 
       {isOpen && (
