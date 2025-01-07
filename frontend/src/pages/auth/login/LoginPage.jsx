@@ -121,7 +121,63 @@ const LoginPage = () => {
       </div>
       <div className="flex-1 flex flex-col justify-center items-center">
         <form className="flex gap-4 flex-col" onSubmit={handleSubmit}>
-          <XSvg className="w-24 lg:hidden fill-white" />
+        <div className=" lg:hidden ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          width="350"
+          height="350"
+        >
+          <circle cx="30" cy="30" r="10" fill="#4CAF50" />
+          <circle cx="70" cy="30" r="10" fill="#4CAF50" />
+          <circle cx="30" cy="70" r="10" fill="#4CAF50" />
+          <circle cx="70" cy="70" r="10" fill="#4CAF50" />
+          <line
+            x1="30"
+            y1="30"
+            x2="70"
+            y2="30"
+            stroke="#4CAF50"
+            stroke-width="3"
+          />
+          <line
+            x1="30"
+            y1="30"
+            x2="30"
+            y2="70"
+            stroke="#4CAF50"
+            stroke-width="3"
+          />
+          <line
+            x1="70"
+            y1="30"
+            x2="70"
+            y2="70"
+            stroke="#4CAF50"
+            stroke-width="3"
+          />
+          <line
+            x1="30"
+            y1="70"
+            x2="70"
+            y2="70"
+            stroke="#4CAF50"
+            stroke-width="3"
+          />
+          <text
+            x="50%"
+            y="50%"
+            font-family="Arial"
+            font-size="24"
+            text-anchor="middle"
+            fill="#4CAF50"
+            dy="5"
+            className="text-white"
+          >
+            c
+          </text>
+        </svg>
+      </div>
           <h1 className="text-4xl font-extrabold text-white"> Let's connect</h1>
           <label className="input input-bordered rounded flex items-center gap-2">
             <MdOutlineMail />

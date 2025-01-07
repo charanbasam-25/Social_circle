@@ -104,6 +104,7 @@ const NotePad = () => {
     }
   };
 
+
   const handleDeleteNote = (id) => {
     deleteNoteMutation.mutate(id);
   };
