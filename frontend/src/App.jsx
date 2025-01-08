@@ -8,7 +8,7 @@ import ProfilePage from "./pages/profile/ProfilePage";
 import NotePad from "./components/common/NotePad.jsx";
 import ProductsCarousel from "./components/common/ProductsCarousal.jsx";
 import Sidebar from "./components/common/Sidebar";
-import RightPanel from "./components/common/RightPanel";
+import RightPanel from "./components/common/Rightpanel.jsx";
 import { Toaster } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
 import LoadingSpinner from "./components/common/LoadingSpinner";
