@@ -53,68 +53,54 @@ const NotificationPage = () => {
   return (
     <>
       <div className="flex-[4_4_0]   border-gray-700 min-h-screen">
-        <div className="flex justify-between gap-10 h-20 px-4 py-2 items-center  bg-[#4eb84c] mb-4 rounded-md">
-          <p className="font-bold">Notifications</p>
-          <div className="dropdown ">
-            <div tabIndex={0} role="button" className="m-1">
-              <IoSettingsOutline className="w-4" />
+        <div className="flex flex-col">
+          <div className="flex justify-between gap-10 h-20 px-4 py-2 items-center  bg-[#4eb84c] mb-4 rounded-md">
+            <p className="font-bold">Notifications</p>
+          </div>
+          {isLoading && (
+            <div className="flex justify-center h-full items-center">
+              <LoadingSpinner size="lg" />
             </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52  md:top-[100%] md:left-[100%] md:translate-x-[-100%] md:translate-y-0 
-    top-[100%] left-[50%] transform -translate-x-[60%] translate-y-[100%] md:translate-x-0"
+          )}
+          {notifications?.length === 0 && (
+            <div className="text-center p-4 font-bold">No notifications 🤔</div>
+          )}
+          {notifications?.map((notification) => (
+            <div
+              className="border-[#4eb84c] border-2 rounded-md mb-1"
+              key={notification._id}
             >
-              <li>
-                <a onClick={deleteNotifications}>
-                  {t("delete_all_your_notifications")}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {isLoading && (
-          <div className="flex justify-center h-full items-center">
-            <LoadingSpinner size="lg" />
-          </div>
-        )}
-        {notifications?.length === 0 && (
-          <div className="text-center p-4 font-bold">No notifications 🤔</div>
-        )}
-        {notifications?.map((notification) => (
-          <div
-            className="border-[#4eb84c] border-2 rounded-md mb-1"
-            key={notification._id}
-          >
-            <div className="flex gap-2 p-4">
-              {notification.type === "follow" && (
-                <FaUser className="w-7 h-7 text-primary" />
-              )}
-              {notification.type === "like" && (
-                <FaHeart className="w-7 h-7 text-red-500" />
-              )}
-              <Link to={`/profile/${notification.from.username}`}>
-                <div className="avatar">
-                  <div className="w-8 rounded-full">
-                    <img
-                      src={
-                        notification.from.profileImg ||
-                        "/avatar-placeholder.png"
-                      }
-                    />
+              <div className="flex gap-2 p-4">
+                {notification.type === "follow" && (
+                  <FaUser className="w-7 h-7 text-primary" />
+                )}
+                {notification.type === "like" && (
+                  <FaHeart className="w-7 h-7 text-red-500" />
+                )}
+                <Link to={`/profile/${notification.from.username}`}>
+                  <div className="avatar">
+                    <div className="w-8 rounded-full">
+                      <img
+                        src={
+                          notification.from.profileImg ||
+                          "/avatar-placeholder.png"
+                        }
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-1">
-                  <span className="font-bold">
-                    @{notification.from.username}
-                  </span>{" "}
-                  {notification.type === "follow"
-                    ? "followed you"
-                    : t("liked_your_post")}
-                </div>
-              </Link>
+                  <div className="flex gap-1">
+                    <span className="font-bold">
+                      @{notification.from.username}
+                    </span>{" "}
+                    {notification.type === "follow"
+                      ? "followed you"
+                      : t("liked_your_post")}
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
